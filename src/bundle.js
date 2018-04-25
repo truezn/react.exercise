@@ -82,7 +82,7 @@ var ReactDOM = __webpack_require__(10);
 ReactDOM.render(React.createElement(
   "h1",
   null,
-  "Hello World, Ning and Feng"
+  "Hello World, Ning and Feng, love mother"
 ), document.getElementById("myapp"));
 
 /***/ }),
