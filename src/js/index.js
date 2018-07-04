@@ -1,10 +1,21 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
-import ComponentHeader from './components/ComponentHeader';
+import ComponentHeader from './components/componentheader';
+import ComponentFooter from './components/componentfooter'; 
+import ComponentBody   from './components/componentbody';
 class Index extends React.Component{
     render(){
+        var component; 
+        if (1==1)
+        {
+            component = <ComponentBody/>;
+        }
         return (
+        <div>
         <ComponentHeader/>
+        {component}
+        <ComponentFooter/>
+        </div>
       );
     }; 
 }
