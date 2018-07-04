@@ -19196,6 +19196,10 @@ var ComponentBody = function (_React$Component) {
     _createClass(ComponentBody, [{
         key: 'render',
         value: function render() {
+            var userName = ' ';
+            var buttonName = 'press me';
+            //   &nbsp indicate the enter
+            var html = 'this&nbspis&nbspimooc';
             return _react2.default.createElement(
                 'div',
                 null,
@@ -19203,7 +19207,19 @@ var ComponentBody = function (_React$Component) {
                     'h2',
                     null,
                     'this is body'
-                )
+                ),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    userName === ' ' ? "user name is empty" : userName
+                ),
+                _react2.default.createElement('input', { type: 'button', value: buttonName }),
+                _react2.default.createElement(
+                    'p',
+                    null,
+                    html
+                ),
+                _react2.default.createElement('p', { dangerouslySetInnerHTML: { __html: html } })
             );
         }
     }]);
