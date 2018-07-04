@@ -2,8 +2,7 @@ var webpack = require("webpack");
 var path = require("path");
 
 module.exports = {
-  context: __dirname + "/src",
-  entry: "./js/index.js",
+  entry: __dirname + "/src/js/index.js",
   mode: "none",
   module: {
     rules: [
@@ -18,10 +17,10 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "build")
+    contentBase: path.resolve(__dirname,"build")
   },
   output: {
-    path: __dirname + "/src/",
+    path: __dirname + "/src/public/",
     filename: "bundle.js"
   }
 };
