@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname,"build")
+    contentBase: path.resolve(__dirname,"/src/public/")
   },
   output: {
     path: __dirname + "/src/public/",
