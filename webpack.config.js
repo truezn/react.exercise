@@ -1,5 +1,5 @@
 var webpack = require("webpack");
-var path = require("path");
+// var path = require("path");
 
 module.exports = {
   entry: __dirname + "/src/js/index.js",
@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname,"/src/public/")
+    contentBase: "./"
   },
   output: {
     path: __dirname + "/src/public/",
