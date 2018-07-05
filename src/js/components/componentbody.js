@@ -1,4 +1,5 @@
 import React from 'react'; 
+import ComponentChild from './componentbodychild'
 export default class ComponentBody extends React.Component{
 
 
@@ -28,18 +29,26 @@ constructor(params) {
                     age: "30"};
     
 }
+
+onHandleChangenName(){
+    this.setState({userName:"Ning Zhang"});
+}
+
+handleInputChange(event){
+    this.setState({userName:event.target.value});
+}
   render(){
       var userName = ' ';
       var buttonName = 'press me';
     //   &nbsp indicate the enter
       var html = 'this&nbspis&nbspimooc';
 
-      setTimeout(()=>{
-      this.setState({
-          userName: "XiaoFeng",
-          age: "25"
-      })
-      },2000); 
+    //   setTimeout(()=>{
+    //   this.setState({
+    //       userName: "XiaoFeng",
+    //       age: "25"
+    //   })
+    //   },4000); 
       return(
         <div>
             <h2>
@@ -62,7 +71,9 @@ constructor(params) {
                 {/*this is for learning state*/}
                 {this.state.userName},{this.state.age},{this.props.gender}
             </p> 
-
+            {/*This is for learning the binding method*/}
+            <input type="button" value="submit" onClick={this.onHandleChangenName.bind(this)}/>
+            <ComponentChild handleInputChange = {this.handleInputChange.bind(this)}/>
         </div>   
       );
   }
