@@ -1,5 +1,26 @@
 import React from 'react'; 
 export default class ComponentBody extends React.Component{
+
+
+componentWillMount() {
+    console.log("ComponentBody-componentWillMount");
+}
+
+componentDidMount(){
+    console.log("ComponentBody-componentDidMount");
+}
+
+componentWillReceiveProps(){
+    console.log("ComponentBody-componentWillReceiveProps");
+}
+
+componentWillUpdate(){
+    console.log("ComponentBody-componentWillUpdate");
+}
+
+componentDidUpdate(){
+    console.log("ComponentBody-componentDidUpdate");
+}
   render(){
       var userName = ' ';
       var buttonName = 'press me';
