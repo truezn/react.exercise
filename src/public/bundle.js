@@ -125,7 +125,7 @@ var Index = function (_React$Component) {
         value: function render() {
             var component;
             if (true) {
-                component = React.createElement(_componentbody2.default, null);
+                component = React.createElement(_componentbody2.default, { gender: "male" });
             }
             return React.createElement(
                 "div",
@@ -19197,12 +19197,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var ComponentBody = function (_React$Component) {
     _inherits(ComponentBody, _React$Component);
 
-    function ComponentBody() {
-        _classCallCheck(this, ComponentBody);
-
-        return _possibleConstructorReturn(this, (ComponentBody.__proto__ || Object.getPrototypeOf(ComponentBody)).apply(this, arguments));
-    }
-
     _createClass(ComponentBody, [{
         key: "componentWillMount",
         value: function componentWillMount() {
@@ -19228,13 +19222,35 @@ var ComponentBody = function (_React$Component) {
         value: function componentDidUpdate() {
             console.log("ComponentBody-componentDidUpdate");
         }
-    }, {
+    }]);
+
+    function ComponentBody(params) {
+        _classCallCheck(this, ComponentBody);
+
+        var _this = _possibleConstructorReturn(this, (ComponentBody.__proto__ || Object.getPrototypeOf(ComponentBody)).call(this));
+
+        _this.state = { userName: "Ning",
+            age: "30" };
+
+        return _this;
+    }
+
+    _createClass(ComponentBody, [{
         key: "render",
         value: function render() {
+            var _this2 = this;
+
             var userName = ' ';
             var buttonName = 'press me';
             //   &nbsp indicate the enter
             var html = 'this&nbspis&nbspimooc';
+
+            setTimeout(function () {
+                _this2.setState({
+                    userName: "XiaoFeng",
+                    age: "25"
+                });
+            }, 2000);
             return _react2.default.createElement(
                 "div",
                 null,
@@ -19254,7 +19270,16 @@ var ComponentBody = function (_React$Component) {
                     null,
                     html
                 ),
-                _react2.default.createElement("p", { dangerouslySetInnerHTML: { __html: html } })
+                _react2.default.createElement("p", { dangerouslySetInnerHTML: { __html: html } }),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    this.state.userName,
+                    ",",
+                    this.state.age,
+                    ",",
+                    this.props.gender
+                )
             );
         }
     }]);

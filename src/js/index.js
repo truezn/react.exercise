@@ -14,7 +14,7 @@ class Index extends React.Component{
         var component; 
         if (1==1)
         {
-            component = <ComponentBody/>;
+            component = <ComponentBody gender={"male"}/>;
         }
         return (
         <div>
